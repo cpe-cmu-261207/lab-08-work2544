@@ -11,7 +11,7 @@ type Task = {
   name: string;
   complete: boolean;
 }
-
+console.log("start")
 const tasks: Task[] = []
 app.get('/me',(req,res)=>{
   console.log(req.query)
