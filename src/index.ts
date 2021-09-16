@@ -14,18 +14,13 @@ type Task = {
 console.log("start")
 const tasks: Task[] = []
 app.get('/me',(req,res)=>{
-  console.log(req.query)
-  console.log("hello")
-  console.log("hello")
   return res.json({id:'630610759',name:'latthaphol laohapiboonrattana'})
 })
-app.get('/todo', (req, res) => {
+app.post('/todo', (req, res) => {
 
   // try to call /todo?q1=data1&q2data2
   // you can read query parameters with "req.query"
   console.log(req.query)
-  console.log("hello")
-  console.log("hello")
   return res.json({ status: 'success', tasks })
 })
 
