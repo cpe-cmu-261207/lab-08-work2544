@@ -27,7 +27,7 @@ app.get('/todo', (req, res) => {
 //Heroku will set process.env.PORT to server port
 //But if this code run locally, port will be 3000
 const port = process.env.PORT || 3000
-
 app.listen(port, () => {
   console.log('Server is running at port' + port)
-})
+}
+)
