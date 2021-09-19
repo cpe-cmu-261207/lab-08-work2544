@@ -71,7 +71,7 @@ app.put('/todo/:id', (req, res) => {
     return res.status(404).json({ status: "failed", message: "Id is not found" })
   }
 })
-app.delete('/todo/delete/:id',(req,resp)=>{
+app.delete('/todo/:id',(req,resp)=>{
   
   const id=parseInt(req.params.id)
   const deleter=tasks.findIndex(x=>x.id===id)
