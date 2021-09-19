@@ -62,11 +62,10 @@ app.post('/todo', (req, res) => {
 })
 app.put('/todo/:id', (req, res) => {
   let Changeid = parseInt(req.params.id)
-  console.log(Changeid)
   let changer = tasks.findIndex(x => x.id == Changeid)
   if (changer > -1) {
     tasks[changer].complete = !tasks[changer].complete
-    return res.status(200).json({ status: "succes", tasks })
+    return res.status(200).json({ status: "succes", task:{id:tasks[changer].id,name:tasks[changer].name,complete:tasks[changer].complete} })
   }
   else {
     return res.status(404).json({ status: "failed", message: "Id is not found" })
